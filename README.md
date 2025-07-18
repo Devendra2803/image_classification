@@ -16,19 +16,18 @@ This project is a FastAPI-based image classification API using **MobileNetV2** f
 ---
 
 ## 🗂️ Project Structure
-
-image_classification/
-│
-├── app/
-│ ├── main.py # FastAPI entrypoint
-│ ├── mobilenet_processor.py # Training & prediction logic
-│ ├── models.py # Pydantic models
-│ └── database.py (optional) # DB logging (optional)
-│
-├── saved_model/ # Stores trained model
-├── temp/ # Temporary ZIP extract and cleanup
+CLASSIFICATION_MODEL/
+├── .env
 ├── requirements.txt
-└── README.md
+└── app/
+    ├── main.py                         # FastAPI entrypoint
+    ├── database.py                     # (Optional) Logging DB config
+    ├── models.py                       # Pydantic request/response models
+    ├── create_table.py                 # (Optional) DB schema creation
+    └── classification_feature/
+        ├── mobilenet_processor.py      # Training & prediction logic for MobileNetV2
+        ├── resnet_processor.py         # Training & prediction logic for ResNet
+        └── routes.py  
 
 ---
 
