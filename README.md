@@ -16,6 +16,7 @@ This project is a FastAPI-based image classification API using **MobileNetV2** f
 ---
 
 ## 🗂️ Project Structure
+```bash
 CLASSIFICATION_MODEL/
 ├── .env
 ├── requirements.txt
